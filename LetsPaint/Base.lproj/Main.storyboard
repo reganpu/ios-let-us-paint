@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Let's Paint!-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ArtboardViewController" customModule="LetsPaint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeW-BX-9RA">
+                                <rect key="frame" x="251" y="609" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="yOW-03-SoH"/>
+                                </constraints>
+                                <state key="normal" title="btnEraser" image="Eraser"/>
+                                <connections>
+                                    <action selector="btnErase_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXT-3k-jA4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6V-6U-3XL" customClass="ArtboardView" customModule="LetsPaint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="78" width="375" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-qX-bed">
+                                <rect key="frame" x="16" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="kpZ-eq-zte"/>
+                                </constraints>
+                                <state key="normal" title="btnUndo" image="Undo"/>
+                                <connections>
+                                    <action selector="btnUndo_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keK-lM-D2x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-si-Esj">
+                                <rect key="frame" x="309" y="609" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="H3u-8r-2ke"/>
+                                </constraints>
+                                <state key="normal" title="btnPen" image="Green 0x1abc9c"/>
+                                <connections>
+                                    <action selector="btnPen_Click_PopOverANewVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Muz-zJ-Ans"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AeW-BX-9RA" firstAttribute="baseline" secondItem="dOb-si-Esj" secondAttribute="baseline" id="7De-t5-Blf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AeW-BX-9RA" secondAttribute="bottom" constant="8" symbolic="YES" id="7qu-Up-K0f"/>
+                            <constraint firstItem="AeW-BX-9RA" firstAttribute="top" secondItem="Y6V-6U-3XL" secondAttribute="bottom" constant="16" id="9sB-nf-5pr"/>
+                            <constraint firstItem="Y6V-6U-3XL" firstAttribute="top" secondItem="VS5-qX-bed" secondAttribute="bottom" constant="8" symbolic="YES" id="Wmr-PP-q44"/>
+                            <constraint firstItem="VS5-qX-bed" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YeT-0o-yef"/>
+                            <constraint firstAttribute="trailing" secondItem="Y6V-6U-3XL" secondAttribute="trailing" id="cDF-Aj-YvR"/>
+                            <constraint firstItem="dOb-si-Esj" firstAttribute="leading" secondItem="AeW-BX-9RA" secondAttribute="trailing" constant="8" symbolic="YES" id="dFb-3F-dsO"/>
+                            <constraint firstItem="dOb-si-Esj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gNX-7R-qjE"/>
+                            <constraint firstItem="Y6V-6U-3XL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iMQ-8a-fTj"/>
+                            <constraint firstItem="VS5-qX-bed" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nDg-Yd-Pys"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Let's Paint!" id="czA-6t-EQI"/>
+                    <connections>
+                        <outlet property="artboardView" destination="Y6V-6U-3XL" id="ykf-V3-5nX"/>
+                        <outlet property="btnPen" destination="dOb-si-Esj" id="7V3-vZ-5Uc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-546.39999999999998" y="82.3088455772114"/>
+        </scene>
+        <!--Palette View Controller-->
+        <scene sceneID="sel-JU-FoD">
+            <objects>
+                <viewController storyboardIdentifier="sbPopUpID" id="z5w-vl-rkY" customClass="PaletteViewController" customModule="LetsPaint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XEl-hd-6dr"/>
+                        <viewControllerLayoutGuide type="bottom" id="5cN-ZB-blL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v7e-Cn-g9A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-Un-Gqx" customClass="PaletteView" customModule="LetsPaint" customModuleProvider="target">
+                                <rect key="frame" x="54" y="254" width="266" height="159"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnu-yS-wWw">
+                                        <rect key="frame" x="21" y="89" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Blue" image="Blue 0x3498db"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="1HK-NR-JNW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ive-tL-1Db">
+                                        <rect key="frame" x="79" y="89" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Purple" image="Purple 0x9b59b6"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="6PS-rN-ilb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epJ-Jk-SNx">
+                                        <rect key="frame" x="137" y="89" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Gray" image="Gray 0x7f8c8d"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="mvo-yL-neQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-SG-qYj">
+                                        <rect key="frame" x="195" y="89" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Black" image="Black 0x34495e"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="5Y4-Av-I1v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pln-Ik-Pwy">
+                                        <rect key="frame" x="21" y="31" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Red" image="Red 0xe74c3c"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="9mU-gz-mj1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-UU-9Gi">
+                                        <rect key="frame" x="79" y="31" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Orange" image="Orange 0xe67e22"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="15C-pg-31a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ias-zx-0kM">
+                                        <rect key="frame" x="137" y="31" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Yellow" image="Yellow 0xf1c40f"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="Enu-UA-pRn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f2-1b-H62">
+                                        <rect key="frame" x="195" y="31" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Green" image="Green 0x1abc9c"/>
+                                        <connections>
+                                            <action selector="btn_Click_ChangeTheImageOfbtnPen:" destination="z5w-vl-rkY" eventType="touchUpInside" id="xBY-dS-zdr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="BKa-FL-TB1"/>
+                                    <constraint firstAttribute="width" constant="266" id="Ksn-nx-8l4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3GH-Un-Gqx" firstAttribute="centerX" secondItem="v7e-Cn-g9A" secondAttribute="centerX" id="6cc-4l-KNY"/>
+                            <constraint firstItem="3GH-Un-Gqx" firstAttribute="centerY" secondItem="v7e-Cn-g9A" secondAttribute="centerY" id="G7i-bS-JGG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9si-TB-CmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271.19999999999999" y="82.3088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Black 0x34495e" width="50" height="50"/>
+        <image name="Blue 0x3498db" width="50" height="50"/>
+        <image name="Eraser" width="50" height="50"/>
+        <image name="Gray 0x7f8c8d" width="50" height="50"/>
+        <image name="Green 0x1abc9c" width="50" height="50"/>
+        <image name="Orange 0xe67e22" width="50" height="50"/>
+        <image name="Purple 0x9b59b6" width="50" height="50"/>
+        <image name="Red 0xe74c3c" width="50" height="50"/>
+        <image name="Undo" width="50" height="50"/>
+        <image name="Yellow 0xf1c40f" width="50" height="50"/>
+    </resources>
+</document>
